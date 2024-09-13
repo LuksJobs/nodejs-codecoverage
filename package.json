@@ -1,0 +1,28 @@
+{
+  "name": "docker-rest-api",
+  "version": "1.0.0",
+  "author": "Oliveira Dantas, Lucas",
+  "description": "docker rest api testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage --coverageDirectory=output/coverage|| exit 0",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "sonar": "node sonar-project.js"
+  },
+  "license": "ISC",
+"dependencies": {
+    "@types/jest": "^29.5.3", 
+    "cross-env": "^7.0.3", 
+    "dotenv": "^16.0.3", 
+    "express": "^4.18.2", 
+    "http": "0.0.1-security", 
+    "jest": "^29.6.2", 
+    "mongoose": "^7.4.0", 
+    "nodemon": "^2.0.22", 
+    "sonar-scanner": "^3.1.0", 
+    "sonarqube-scanner": "^3.1.0", 
+    "supertest": "^6.3.3", 
+    "ts-jest": "^29.1.1" 
+}
+}
