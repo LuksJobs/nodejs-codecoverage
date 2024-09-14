@@ -21,7 +21,7 @@ Certifique-se de ter os seguintes itens instalados:
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-## Instalação
+## How to Use (Container)
 
 1. Clone o repositório:
 ```bash
@@ -37,11 +37,12 @@ bash
 ```bash
    docker-compose up -d
 ```
-## Uso
+## Rodar Localmente (NPM)
 
 Para iniciar a aplicação, execute:
 ```bash
-npm start
+   npm install #instalar as dependências do projeto
+   npm start #executar o projeto local via npm 
 ```
 Sua aplicação estará rodando em `http://localhost:8000`.
 
@@ -49,24 +50,25 @@ Sua aplicação estará rodando em `http://localhost:8000`.
 
 Para executar testes unitários, use o seguinte comando:
 ```bash
-npm test
+   npm test
 ```
 Este comando executará sua suíte de testes usando Jest e Supertest.
 
 ## Cobertura de Código
 
 Para verificar a cobertura de código dos seus testes, execute:
-bash
-npm run test:coverage
+```bash
+   npm run test:coverage
+```
 Este comando gerará um relatório de cobertura no diretório `coverage`.
 
 ## SonarQube Scanner
 
 Para analisar seu código com o SonarQube, certifique-se de que você tenha um servidor SonarQube em execução. Você pode usar o Docker para rodar o SonarQube localmente:
 ```bash
-docker run -d --name sonarqube -p 9000:9000 sonarqube
+   docker run -d --name sonarqube -p 9000:9000 sonarqube
 ```
 Uma vez que o SonarQube esteja em execução, você pode analisar seu projeto com o seguinte comando:
 ```bash
-npm run sonar-scanner
+   npm run sonar-scanner
 ```
